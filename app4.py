@@ -6,7 +6,7 @@ import numpy as np
 with open("model1.pkl", "rb") as f:
     model = pickle.load(f)
 
-st.title("🌦️ Precipitation Prediction App")
+st.title("🌦️ Weather Prediction App")
 st.write("Predict precipitation percentage using temperature")
 
 # Input
@@ -23,3 +23,4 @@ if st.button("Predict"):
     prediction = model.predict(input_data)[0]
 
     st.success(f"🌧️ Predicted Precipitation: {prediction:.2f} %")
+
